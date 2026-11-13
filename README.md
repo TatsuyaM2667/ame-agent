@@ -14,7 +14,7 @@ ame-agent: コーディング CLI の出力を、共通の出来事(1 行 1 つ�
   ame-agent sessions [フォルダ]          Claude Code のそのフォルダの会話(新しい順){"id","title","mtime"}
   ame-agent history フォルダ 会話の id   その会話の記録を、同じ出来事にして出す
 
-形式: claude(既定。Qwen Code・Cursor Agent・Amp も)/ gemini / codex / opencode / kimi / raw
+形式: claude(既定。Qwen Code・Cursor Agent・Amp も)/ antigravity(agy)/ gemini / codex / opencode / kimi / raw
 出来事(読み方は lib/agentfmt.zig。ame-shell の AI チャットのパネルも同じものを使う):
   {"type":"session","id"}            会話の id(次は --resume などに渡せる)
   {"type":"delta","text"}            少しずつ届く返事の続き / {"type":"text","text"} まとまった返事
@@ -34,7 +34,7 @@ zig build test
 
 ## このリポジトリについて
 
-正本は ame-shell の `src/cmd/ame-agent.zig` と `src/lib/` です。このリポジトリは `scripts/split-repos.sh` が生成して同期しています。
+正本は ame-shell の `src/cmd/ame-agent.zig` です。このリポジトリは `scripts/split-repos.sh` が生成して同期しています。
 直したいところがあれば ame-shell の方へお願いします。
 
 ライセンス: GPL-3.0(ame-shell と同じ)
